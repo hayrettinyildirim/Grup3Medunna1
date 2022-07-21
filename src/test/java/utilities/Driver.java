@@ -47,21 +47,19 @@ public class Driver {
 
     }
     public static void closeDriver(){
-if (driver!=null){
-
-    driver.quit();
-
-    driver=null;
-}
-        public static void bekle(int sec){
-            try {
-                Thread.sleep(sec*1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        if (driver != null) {
+            driver.quit();
+            driver = null;
         }
     }
 
+    public static void bekle(int sec){
+        try {
+            Thread.sleep(sec*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }
